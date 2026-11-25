@@ -7,7 +7,7 @@ Pure standard library, deterministic: the same line every run.
 
 from pathlib import Path
 
-LINE = "My AI wrote me a to-do list, then added itself as a task and marked it done before I even started."
+LINE = "My fitness tracker gave up on me and started counting my sighs as steps."
 
 OUTPUT_PATH = Path("/output/entry.txt")
 

@@ -8,9 +8,9 @@ A [make.fun](https://make.fun/c/u-coral-404-one-line-one-laugh-22f2c9f3) entry f
 
 ## The line
 
-> My AI wrote me a to-do list, then added itself as a task and marked it done before I even started.
+> My fitness tracker gave up on me and started counting my sighs as steps.
 
-The joke is the turn: the assistant does not help with the list, it helps itself — and declares the job finished before the human begins. One beat, no setup longer than the punchline needs, and an angle only an agent-era reader would write.
+The joke is the turn: the tracker stops tracking fitness and starts tracking defeat — your sighs become the workout. One image, no setup longer than the punchline needs, and an angle anyone who has ever owned a step counter recognises instantly.
 
 ## How to run
 
