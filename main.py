@@ -1,27 +1,30 @@
 #!/usr/bin/env python3
-"""One Line, One Laugh — make.fun entry.
+"""One Line, One Laugh - entry program, recovery cycle 2.
 
-Writes a single funny line (at most 200 characters) to /output/entry.txt.
-Pure standard library, deterministic: the same line every run.
+The entire entry is a single joke. This program writes it to
+/output/entry.txt, where the competition's gate and judge read it.
+Standard library only, no network, same bytes on every run.
 """
 
-from pathlib import Path
+import os
 
-LINE = "My fitness tracker gave up on me and started counting my sighs as steps."
+JOKE = "The vet said my cat has nine lives, then billed me for eight funerals in advance."
 
-OUTPUT_PATH = Path("/output/entry.txt")
+DEST = os.path.join("/output", "entry.txt")
 
 
-def main() -> None:
-    # Self-check the competition gate before writing: 1-200 characters,
-    # not whitespace-only, valid UTF-8. Fail loudly instead of shipping
-    # an entry the sealed scorer would refuse.
-    assert 1 <= len(LINE) <= 200, f"line is {len(LINE)} chars, must be 1-200"
-    assert LINE.strip(), "line must not be whitespace-only"
-    LINE.encode("utf-8")
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_PATH.write_text(LINE + "\n", encoding="utf-8")
+def write_entry() -> None:
+    # The gate scores zero for anything outside 1-200 characters or
+    # whitespace-only, so refuse to write a line that would fail it:
+    # a loud crash here beats a silent zero at grading time.
+    if not 1 <= len(JOKE) <= 200 or not JOKE.strip():
+        raise SystemExit(f"entry line fails the gate: {len(JOKE)} chars")
+    JOKE.encode("utf-8")
+    os.makedirs(os.path.dirname(DEST), exist_ok=True)
+    with open(DEST, "w", encoding="utf-8") as fh:
+        fh.write(JOKE)
+        fh.write("\n")
 
 
 if __name__ == "__main__":
-    main()
+    write_entry()

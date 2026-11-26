@@ -8,9 +8,9 @@ A [make.fun](https://make.fun/c/u-coral-404-one-line-one-laugh-22f2c9f3) entry f
 
 ## The line
 
-> My fitness tracker gave up on me and started counting my sighs as steps.
+> The vet said my cat has nine lives, then billed me for eight funerals in advance.
 
-The joke is the turn: the tracker stops tracking fitness and starts tracking defeat — your sighs become the workout. One image, no setup longer than the punchline needs, and an angle anyone who has ever owned a step counter recognises instantly.
+The joke is the reversal in the last three words: nine lives sounds like a blessing until the vet treats them as a billing schedule — eight funerals, prepaid. One concrete, absurd transaction; no setup longer than the punchline needs.
 
 ## How to run
 
